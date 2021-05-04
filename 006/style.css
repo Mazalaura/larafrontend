@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color:lightseagreen;
+    margin: 0;
+    letter-spacing: -.31em;
+    font-family: 'Lobster', cursive;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+.dezute {
+    padding: 18px;
+}
+
+.row {
+    letter-spacing: -.31em;
+    text-rendering: optimizespeed;
+    border-top: 3px double gainsboro;
+}
+
+.box {
+    zoom: 1;
+    letter-spacing: normal;
+    text-rendering: auto;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.box:last-child {
+    padding-right: 0;
+}
+.box:first-child {
+    padding-left: 0;
+}
+
+.d-1 {
+    width: 50%;
+    display: inline-block;
+}
+
+.d-2 {
+    width: 33.33333%;
+}
+
+.d-3 {
+    width: 25%;
+}
+
+.d-4 {
+    width: 100%;
+}
+.img-dezute:hover::after {
+    opacity: 0.3;
+}
+.img-dezute {
+    margin: 15px 5px;
+    padding: 10px;
+    border: 4px solid gold;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s;
+}
+.img-dezute::after {
+    content: '';
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-image: linear-gradient(to right, red , yellow);
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+.img-dezute:hover {
+    border-color: royalblue;
+}
+
+.img-dezute p {
+    margin-right: 100px;
+    padding: 5px;
+    text-align: justify;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 70px;
+    margin: 15px 5px;
+    padding: 10px;
+    border: 4px solid green;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.box:last-child .img-container{
+    margin-right: 0;
+}
+
+.box:first-child .img-container{
+    margin-left: 0;
+}
+
+.title {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background-color: hsla(256, 100%, 50%, 0.739);
+    color: white;
+    border-radius: 50%;
+    left: 25px;
+    bottom: 25px;
+    display: block;
+    transition: all 0.9s;
+    z-index: 20;
+}
+
+.img-dezute:hover .title {
+    background-color: rgba(65, 105, 225, 0.739);
+}
+
+
+.title span{
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-size: 20px;
+    line-height: 1;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Dancing Script', cursive;
+    transition: all 0.5s;
+    
+}
+
+.img-dezute:hover .title span {
+    transform: rotate(360deg);
+}
+
+h1 {
+    text-align: center;
+    color: teal;
+    letter-spacing: 3px;
+}
+
+h1 span {
+    display: inline-block;
+    padding: 6px;
+    font-size: 140%;
+    font-family: 'Dancing Script', cursive;
+}
+.parent::after {
+    content: url(http://127.0.0.1:5500/006/viso%20gero.gif);
+    display: block;
+    position: relative;
+    text-align: center;
+}

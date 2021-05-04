@@ -1,0 +1,42 @@
+p {
+color: yellow;
+}
+p:first-child {
+color: blue;
+}
+p:last-child {
+    color: red;
+}
+h1 p:first-child {
+    color: green;
+}
+li {
+    color: brown;
+}
+li:first-child {
+    color: black;
+}
+li:last-child {
+display: none;
+}
+div:first-child {
+    background-color: lavender;
+}
+/* body > div {
+    background-color: lightsalmon;
+} */
+/* body > div p:first-child {
+    color:violet;
+} */
+/* div + p {
+    background-color: yellow;
+} */
+div ~ p  {
+    background-color: yellow;
+}
+body > div :nth-child(even) {
+    letter-spacing: 30px;
+}
+div :nth-child(even) {
+    border: 1px solid black;
+}

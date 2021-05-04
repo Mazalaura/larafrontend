@@ -1,0 +1,112 @@
+h1.uzklase{
+color: olivedrab ;
+letter-spacing: 10px;
+margin: 50px;
+background-color: red;
+}
+#a1 {
+    background-color: rgb(20, 239, 255);
+    color: tomato;
+}
+h1.kb strong { 
+    color:rgb(112, 216, 164);
+}
+
+h1.ko i {
+    letter-spacing: 25px;
+    color: orangered;
+    border: 2px solid red;
+}
+#a1.kb norintys{
+    color: royalblue;
+}
+h1.kc span {
+color:seagreen;
+}
+kb span {
+    color: indigo;
+    }
+.kb {
+    color:deeppink ;
+    letter-spacing: 5px;
+}
+.ko {
+    color:darkslategrey ;
+    letter-spacing: 5px;
+}
+.kc {
+    color:darkorchid ;
+    letter-spacing: 5px;
+}
+span {
+    columns: rgb(126, 128, 0);
+}
+.uzklase{
+    color:darkred ;
+    letter-spacing: 10px;
+    margin: 50px
+    }
+ strong { 
+        color: yellow;
+    }
+    
+ i {
+        letter-spacing: 25px;
+    }
+    h1 {
+        text-align: center;
+        letter-spacing: 2px;
+        color: red;
+    }
+body {
+    background-color: rosybrown;
+    letter-spacing: -.31em;
+    text-rendering: optimizespeed;
+    margin: 0px;
+}
+div {
+    box-sizing: border-box;
+    zoom: 1;
+    letter-spacing: normal;
+}
+    .box.first {
+        border-left: none;   
+        border-bottom: none;    
+        margin: 0px;
+        width: 50%;        
+        display: inline-block; 
+    }
+    .box.second {
+        border-left: none;        
+        margin: 0px;
+        width: 33.33%;
+        display: inline-block; 
+    }
+    .box.third {
+        border-left: none;
+        border-bottom: none;           
+        margin: 0px;
+        width: 25%;
+        display: inline-block;
+    }
+    .box.fourth {
+        border-left: none;        
+        margin: 0px;        
+        width: 100%;
+        display: inline-block;
+}
+    .box span {
+        border: 2px solid red;
+        display: block;       
+        margin: auto;       
+        height: 152px;  
+        position: relative;
+        text-align: center;
+        }
+    .box img {
+        height: 150px;
+        width: auto;
+        position: relative;
+        top: calc(50% - 75px);
+        display: inline-block;
+    }

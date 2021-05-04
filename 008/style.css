@@ -1,0 +1,43 @@
+ /*.op:hover {
+    background-color: lawngreen;
+    border-radius:50%;
+    transform:rotate(360deg); 
+}*/
+.op {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    transition: all 1s linear 2s;
+    position: relative;
+    color: red;
+}
+.op::before {
+    content: "Labukas";
+    display: block;
+    position: relative;
+    color: indigo;
+    width: 100px;
+    height: 100px;
+}
+.op::after {
+    content: "VIso gero";
+    display: block;
+    position: relative;
+   }
+.parent p {
+    color: lightsalmon;
+}
+.parent p1 {
+    color: crimson;}
+
+ .parent abc p:first-child {
+        color:saddlebrown;
+}
+
+.parent p:first-child {
+    color:green;
+}
+.parent p:last-child {
+    color: rebeccapurple;
+    font-weight: bold;
+}

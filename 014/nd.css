@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: 'Dela Gothic One', cursive;
+    }
+.parent::after {
+    content: url(http://127.0.0.1:5500/006/viso%20gero.gif);
+    display: block;
+    position: relative;
+    text-align: center;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 50px 20px;
+}
+.row {
+    letter-spacing: -.31em;
+    text-rendering: auto;
+    }
+.box:last-child {
+    padding-right: 0;
+}
+.box:first-child {
+    padding-left: 0;
+}
+.col1 > div {
+    width: 100%;
+}
+.col2 >div {
+    width: 50%;
+    border-top: 4px dashed green;
+}
+.col3 > div{
+    width: 33.33333%;
+}
+.col4 > div {
+    width: 25%;
+}
+.row .box {
+    float: left;
+    padding: 5px;
+    
+}
+.row .box .bin{
+    background-color:aqua;
+    border: 2px solid brown;
+    }
+
+.row .box .bin p {
+    text-align: center;
+}
+.img-container {
+    margin: 15px 5px;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s;
+}
+.img-container:hover p{
+    border-color: royalblue;
+}
+.img-container p {
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 100px;
+    margin: 5px;
+    padding: 1px;
+    border: 3px solid green;
+    border-radius: 50px 20px;
+    opacity: 1;
+    transition: all 0.5s;
+    z-index: 10;
+    }
+.box:last-child .img-container{
+    margin-right: 0;
+}
+
+.box:first-child .img-container{
+    margin-left: 0;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    height: 3px;
+    border-bottom: 4px dashed green;
+}
+nav {
+    width: 100%;
+    display: block;
+    background-color: cornflowerblue;
+    padding: o;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    background-color: cornflowerblue;
+     
+    }
+ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+ul li {
+    float: left;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    transition: all 300ms;
+    width: 25%;
+    text-align: center;
+}
+ul li:hover {
+    background-color: tomato;
+    letter-spacing: 2px;
+    }
+.title {
+    position: relative;
+    width: 150px;
+    background-color:cadetblue;
+    color: white;
+    border-radius: 30%;
+    left: calc(50% - 80px);
+    bottom: 0;
+    display: block;
+  transition: all 0.5;
+  z-index: 20;
+}
+.img-container:hover .title {
+    background-color: rgba(65, 219, 230, 0.739);
+}
+.img-container:hover .title span {
+    transform: rotate(360deg);
+    color: chartreuse;
+}
+.title span{
+    position: relative;
+    line-height: 1;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Orelega One', cursive; 
+    transition: all 0.2s;     
+}
+.button {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    font-size: 28px;    
+    color: green;
+    cursor: pointer;
+    outline: none;
+    }
+.button:hover, .button:focus {
+    background-color: #333;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+@media screen and (max-width: 500px){
+ul li a {
+    width: 25%;
+    font-style: italic;
+}
+.col1 > div {
+    width: 100%;
+}
+.col2 >div {
+    width: 50%;
+    border-top: 4px dashed green;
+}
+.col3 > div{
+    width: 33.33333%;
+}
+.col4 > div {
+    width: 25%;
+}
+.col1 > img {
+    width: 100%;
+    height: auto;
+}
+.col2 > img {
+    width: 50%;
+}
+.col3 > img {
+    width: 33.33333%;
+}
+.col4 >img {
+    width: 25%;
+}
+}
