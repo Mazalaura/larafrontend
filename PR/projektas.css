@@ -992,38 +992,105 @@ input.kiekis {
 .shop-foto-1, .shop-foto-2, .shop-foto-3, .shop-foto-4, .shop-foto-5, .shop-foto-6, .shop-foto-7, .shop-foto-8 {
   width: 25%;
   display: inline-block;
+  position: relative;
 }
 
-.subheading {
+.subheading1, .subheading2, .subheading3, .subheading4, .subheading5, .subheading6, .subheading7, .subheading8 {
   color: #ffffff;
   font-size: 14px;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  vertical-align: middle;
   letter-spacing: 1px;
-  display: inline-block;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
-.subheading-title {
+.subheading1 span, .subheading2 span, .subheading3 span, .subheading4 span, .subheading5 span, .subheading6 span, .subheading7 span, .subheading8 span {
+  position: relative;
+  top: 45%;
+  display: none;
+}
+
+.subheading1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(6, 46, 15, 0.3)), color-stop(75%, rgba(6, 46, 15, 0.8)));
+  background: linear-gradient(180deg, rgba(6, 46, 15, 0.3) 0%, rgba(6, 46, 15, 0.8) 75%);
+}
+
+.subheading2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(167, 135, 91, 0.3)), color-stop(75%, rgba(167, 135, 91, 0.8)));
+  background: linear-gradient(180deg, rgba(167, 135, 91, 0.3) 0%, rgba(167, 135, 91, 0.8) 75%);
+}
+
+.subheading3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(169, 91, 10, 0.3)), color-stop(75%, rgba(169, 91, 10, 0.8)));
+  background: linear-gradient(180deg, rgba(169, 91, 10, 0.3) 0%, rgba(169, 91, 10, 0.8) 75%);
+}
+
+.subheading4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(71, 10, 60, 0.3)), color-stop(75%, rgba(71, 10, 60, 0.8)));
+  background: linear-gradient(180deg, rgba(71, 10, 60, 0.3) 0%, rgba(71, 10, 60, 0.8) 75%);
+}
+
+.subheading5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(123, 61, 61, 0.3)), color-stop(75%, rgba(123, 61, 61, 0.8)));
+  background: linear-gradient(180deg, rgba(123, 61, 61, 0.3) 0%, rgba(123, 61, 61, 0.8) 75%);
+}
+
+.subheading6 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 103, 60, 0.3)), color-stop(75%, rgba(47, 103, 60, 0.8)));
+  background: linear-gradient(180deg, rgba(47, 103, 60, 0.3) 0%, rgba(47, 103, 60, 0.8) 75%);
+}
+
+.subheading7 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(71, 10, 60, 0.3)), color-stop(75%, rgba(71, 10, 60, 0.8)));
+  background: linear-gradient(180deg, rgba(71, 10, 60, 0.3) 0%, rgba(71, 10, 60, 0.8) 75%);
+}
+
+.subheading8 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(123, 61, 61, 0.3)), color-stop(75%, rgba(123, 61, 61, 0.8)));
+  background: linear-gradient(180deg, rgba(123, 61, 61, 0.3) 0%, rgba(123, 61, 61, 0.8) 75%);
+}
+
+.subheading1-title, .subheading2-title, .subheading3-title, .subheading4-title, .subheading5-title, .subheading6-title, .subheading7-title, .subheading8-title {
+  text-align: center;
+  letter-spacing: 1px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.subheading1-title h2, .subheading2-title h2, .subheading3-title h2, .subheading4-title h2, .subheading5-title h2, .subheading6-title h2, .subheading7-title h2, .subheading8-title h2 {
+  position: relative;
+  top: 49%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   color: #ffffff;
-  text-align: center;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  vertical-align: middle;
-  letter-spacing: 1px;
-  display: inline-block;
+  display: none;
 }
 
-.shop-foto-1:hover img {
-  content: '';
-  background-color: linear gradient top, rgba(6, 46, 15, 0.3) 0%, rgba(6, 46, 15, 0.8) 75%;
-  background-color: linear gradient to bottom, rgba(6, 46, 15, 0.3) 0%, rgba(6, 46, 15, 0.8) 75%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+.shop-foto-1:hover .subheading1, .shop-foto-2:hover .subheading2, .shop-foto-3:hover .subheading3, .shop-foto-4:hover .subheading4, .shop-foto-5:hover .subheading5, .shop-foto-6:hover .subheading6, .shop-foto-7:hover .subheading7, .shop-foto-8:hover .subheading8 {
+  opacity: 1;
+}
+
+.shop-foto-1:hover .subheading1 span, .shop-foto-2:hover .subheading2 span, .shop-foto-3:hover .subheading3 span, .shop-foto-4:hover .subheading4 span, .shop-foto-5:hover .subheading5 span, .shop-foto-6:hover .subheading6 span, .shop-foto-7:hover .subheading7 span, .shop-foto-8:hover .subheading8 span {
+  display: block;
+}
+
+.shop-foto-1:hover .subheading1-title, .shop-foto-2:hover .subheading2-title, .shop-foto-3:hover .subheading3-title, .shop-foto-4:hover .subheading4-title, .shop-foto-5:hover .subheading5-title, .shop-foto-6:hover .subheading6-title, .shop-foto-7:hover .subheading7-title, .shop-foto-8:hover .subheading8-title {
+  opacity: 1;
+}
+
+.shop-foto-1:hover .subheading1-title h2, .shop-foto-2:hover .subheading2-title h2, .shop-foto-3:hover .subheading3-title h2, .shop-foto-4:hover .subheading4-title h2, .shop-foto-5:hover .subheading5-title h2, .shop-foto-6:hover .subheading6-title h2, .shop-foto-7:hover .subheading7-title h2, .shop-foto-8:hover .subheading8-title h2 {
+  display: block;
 }
 
 .shop-socials {
@@ -1180,5 +1247,90 @@ div.email {
   border-left: 0;
   border-right: 0;
   width: 37%;
+  text-align: right;
+}
+
+.apacia {
+  background-color: #f2f2f2;
+  padding: 30px;
+  color: #636363;
+  display: block;
+}
+
+.apacia-container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+div.about {
+  display: inline-block;
+  width: 32%;
+  height: auto;
+}
+
+div.about h3 {
+  font-size: 22px;
+  color: #636363;
+  margin: 0 0 11px;
+}
+
+div.about h3 p {
+  font-size: 14px;
+  margin: 0 0 15px;
+  color: #4a4a4a;
+}
+
+div.links {
+  display: inline-block;
+  width: 32%;
+  height: auto;
+  padding: 0 0 0 30px;
+}
+
+div.links h3 {
+  font-size: 22px;
+  color: #636363;
+  margin: 0 0 11px;
+}
+
+.links a {
+  font-size: 14px;
+  color: #636363;
+  line-height: 1px;
+}
+
+.links li {
+  display: block;
+  margin: 0 0 15px;
+}
+
+div.newsletter {
+  display: inline-block;
+  width: 32%;
+  height: auto;
+  padding: 0 0 0 30px;
+}
+
+.button8 {
+  background: #333333;
+  font-size: 12px;
+  margin: 0 10px 10px 0;
+  -webkit-transition: all .15s ease-in-out 0s;
+  transition: all .15s ease-in-out 0s;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  pointer-events: auto;
+  border: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Hind', sans-serif;
+  width: 255px;
+  text-decoration: none;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
 }
 /*# sourceMappingURL=projektas.css.map */
