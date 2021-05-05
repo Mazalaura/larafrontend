@@ -30,7 +30,7 @@
     width: 16.66667%;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: $md) {
     .md-1, 
     .md-1-1,
     .md-1-2,
@@ -59,7 +59,7 @@
     } 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $lg) {
     .lg-1, 
     .lg-1-1,
     .lg-1-2,
