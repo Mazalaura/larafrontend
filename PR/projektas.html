@@ -30,11 +30,10 @@
     </div>
     <div class="nuotrauka">
         <img src="img\hero_image_final_2100x.png">
-        
+        <input type="checkbox" id="ham" style="display: none;">
         <div class="menu-container">     
             <div class="menu-left">
                 <ul>
-                    <li class="hamburger"><label for="ham"><i class="fas fa-bars"></i></label></li>
                 <li><a href="" target="_blank">Home</a></li>
                 <li><a href="" target="_blank">Shop <i class="fas fa-angle-down"></a></i></li>
                 <li><a href="" target="_blank">Blog</a></li>
@@ -279,8 +278,8 @@
     </div>  
 
     
-    <div class="pasvirusi-nuotrauka-container grid-container">
-        <div class="parallax sm-1-1 md-1-1 lg-1-2"> 
+    <div class="pasvirusi-nuotrauka-container">
+        <div class="parallax"> 
             <div class="zodziai">
                 <h2 class="homepage-sections--title">Why is it so good for me?</h2>
                 <p>Find out what makes our smoothies bursting with <br> nutrients and anti-oxidents!</p>
@@ -291,22 +290,20 @@
         </div>
     </div>
 
-    <div class="grid-container">
-        <div class="seen-in" sm-1-1 md-1-1 lg-1-1>
-            <h2>As seen in</h2>
-            <div class="logo sm-1-2 md-1-2 lg-1-4">
-                <img src="img\Asset_1_1800x.webp" alt="">
-                <img src="img\Asset_6_2100x.webp" alt="">
-                <img src="img\Asset_7_2100x.webp" alt="">
-                <img src="img\Asset_4_2100x.webp" alt="">
-            </div>
+    <div class="seen-in">
+        <h2>As seen in</h2>
+        <div class="logo">
+            <img src="img\Asset_1_1800x.webp" alt="">
+            <img src="img\Asset_6_2100x.webp" alt="">
+            <img src="img\Asset_7_2100x.webp" alt="">
+            <img src="img\Asset_4_2100x.webp" alt="">
         </div>
     </div>
 
      <div class="atsiliepimai">
         <h2>Testimonials</h2>
-         <div class="row grid-container">
-            <div class="testimonials col3 sm-1-1 md-1-1 lg-1-3">
+         <div class="row">
+            <div class="testimonials col3">
                 <div class="zvaigzdutes">
                     <i class="fa fa-star fa-lg" aria-hidden="true"></i> <i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i>
                 </div>
@@ -314,7 +311,7 @@
                 Tastes great, chilled on a summer evening. But don't make the mistake of only drinking it then, this is too good for that! 
                 <h6>Max Walker</h6> 
             </div>
-            <div class="testimonials col3 sm-1-1 md-1-1 lg-1-3">
+            <div class="testimonials col3">
                 <div class="zvaigzdutes">
                     <i class="fa fa-star fa-lg" aria-hidden="true"></i> <i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i>
                 </div>
@@ -323,7 +320,7 @@
                 </p>
                 <h6>William Anderson</h6>
             </div>
-            <div class="testimonials col3 sm-1-1 md-1-1 lg-1-3">
+            <div class="testimonials col3">
                 <div class="zvaigzdutes">
                     <i class="fa fa-star fa-lg" aria-hidden="true"></i> <i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i><i class="fa fa-star fa-lg" aria-hidden="true"></i></div>
                     <p>
@@ -346,11 +343,20 @@
         </div>
     </div>
    
-    <div class="produkto-aprasas grid-container ">
-        <div class="produkto-img sm-1-1 md-1-1 lg-1-2">
-            <img src="img\almond_oat_front_9ab8bbbc-c71c-48e9-bb62-81166f247b00_900x.jpg"></a>
+    <div class="produkto-aprasas">
+        <div class="produkto-img">
+            <input type="radio" name="circle" id="c1" checked>
+            <img src="img\almond_oat_front_9ab8bbbc-c71c-48e9-bb62-81166f247b00_900x.jpg">
+            <input type="radio" name="circle" id="c2">
+            <img src="img\almond_oat_back_18b6c43b-b2c3-4aba-8322-54139654e8f3_2100x.webp">
         </div>
-        <div class="produkto-kaina sm-1-1 md-1-1 lg-1-2">
+        <div class="circle-holder">
+            <div class="center">
+                <label class="c1" for="c1" ></label>
+                <label class="c2" for="c2"></label>
+            </div>
+        </div>
+        <div class="produkto-kaina">
             <section class="produkto detales">
                 <a href=""><h1 class="produkto-title">Almond & Oat</h1></a> 
                 <span class="perziuros4">  4 reviews</span>
@@ -360,27 +366,27 @@
                     </div>
                     <div class="size">Size</div> 
                         <div data-value="330ml" class="swatch-element 330ml soldout">
-                            <input id="swatch-0-330ml" type="radio" name="option-1" value="330ml"> 
-                            <label for="swatch-0-330ml">330ml</label>
+                            <input id="swatch" type="text" name="option-1" value="330ml" disabled > 
+                            <label for="swatch-0-330ml"></label>
                         </div> 
                         <div data-value="500ml" class="swatch-element 500ml available">
-                            <input id="swatch-0-500ml" type="radio" name="option-1" value="500ml" checked="checked"> 
-                            <label for="swatch-0-500ml">500ml</label>
+                            <input id="swatch" type="text" name="option-1" value="500ml" checked="checked"> 
+                            <label for="swatch-0-500ml"></label>
                          </div> 
                         <div data-value="1000ml" class="swatch-element 1000ml available">
-                            <input id="swatch-0-1000ml" type="radio" name="option-1" value="1000ml"> 
-                            <label for="swatch-0-1000ml">1000ml</label>
+                            <input id="swatch" type="text" name="option-1" value="1000ml"> 
+                            <label for="swatch-0-1000ml"></label>
                         </div>
                         <div class="quantity">
                         <p>QUANTITY</p>
                         <i class="fas fa-minus"></i>
-                        <input type="number" value="1" class="kiekis">
+                        <input type="text" value="1" class="kiekis">
                         <i class="fas fa-plus"></i>
                         </div>
                         <div class="button7">
                         <a href="" >Add to cart</a></div>
                         <div class="button7">
-                        <a href="" >Buy it now</a></div>
+                            <a href="">Buy it now</a></div>
                         <p>
                             Made with 100% certified organic and naturally grown produce picked in Australia, plus other carefully selected superfoods and herbs sourced from around the globe.<br><br>Queenstown is dedicated to making the finest vegan and vegetarian friendly, organically and locally sourced, flavourful smoothies and juices.</p>
                         </div>
@@ -452,12 +458,12 @@
         </div>
     </div>
         
-    <div  class="shop-socials-container grid-container">
-        <div class=shop-socials sm-1-1 md-1-1 lg-1-1>
+    <div  class="shop-socials-container">
+        <div class="shop-socials">
             <h2>What's New?</h2>
         </div>
-        <div class="blog-container grid-container">
-            <div class="blog-foto sm-1-1 md-1-1 lg-1-3">
+        <div class="blog-container">
+            <div class="blog-foto">
              <a href="">
              <img src="img\blog_3_2100x.jpg" alt="">
              </a></div>
@@ -469,8 +475,8 @@
                 Thanks to everyone who contributed by sending in your favourite recipe! See what other people submitted, maybe you'll discover a new favourite.  
              </div>
         </div>
-        <div class="blog-container grid-container">
-            <div class="blog-foto sm-1-1 md-1-1 lg-1-3">
+        <div class="blog-container">
+            <div class="blog-foto-1">
              <a href="">
              <img src="img\blog_1_2100x1575_crop_center.jpg" alt="">
              </a></div>
@@ -482,8 +488,8 @@
                 Who doesn't love Christmas? Or perhaps Halloween? Well, we've gathered a collection of all the best seasonal smoothies for you to feast your eyes on!  
              </div>
         </div>
-        <div class="blog-container grid-container">
-            <div class="blog-foto sm-1-1 md-1-1 lg-1-3">
+        <div class="blog-container">
+            <div class="blog-foto">
              <a href="">
              <img src="img\blog_2_2100x1575_crop_center.jpg" alt="">
              </a></div>
@@ -497,40 +503,41 @@
         </div>
     </div>   
 
-    <div class="free-fina grid-container">
-        <div class="free-container sm-1-1 md-1-1 lg-1-2">
+    <div class="free-fina">
+        <div class="free-container">
             <a href="">
             <span class="free">Free Delivery Wordwide</span> <br>
             <span class="free-text">Clik her for more info</span>
             </a>
         </div>
-        <div class="free-container sm-1-1 md-1-1 lg-1-2">
+        <div class="free-container">
             <a href="">
-            <span class="free">Final Clearance Sale</span> <br>
-            <span class="free-text">Up to 70% off</span>
+            <span class="free" id="nematomas">Final Clearance Sale</span> <br>
+            <span class="free-text" id="nematomas">Up to 70% off</span>
             </a>
         </div>
     </div>
-    <div class="mailing grid-container">
-        <div class="mailing-text sm-1-1 md-1-1 lg-1-2">
-        <h3>Join our Mailing List</h3></div>
+    <div class="mailing">
+        <div class="mailing-text">
+            <h3>Join our Mailing List</h3>
+        </div>
         <div class="email">
             <input id="newsletter_text" type="email" value="" placeholder="Enter email" name="contact[email]" class="input-group-field email" aria-label="translation missing: en.general.newsletter_form_section.newsletter_email" autocorrect="off" autocapitalize="off">
             <input id="newsletter_submit" type="submit" class="btn btn-default" name="subscribe" value=">"></input>
         </div>
     </div>
     <footer class="apacia">
-        <div class="apacia-container grid-container">
-            <div class="about sm-1-1 md-1-1 lg-1-3">
+        <div class="apacia-container">
+            <div class="about">
                 <h3>About</h3>
                 <p>We make delicious smoothies with the best quality fruit and juices.</p>
             </div>
-            <div class="links sm-1-1 md-1-1 lg-1-3">
+            <div class="links">
                 <h3>Links</h3>
                 <li><a href="">Search</a></li>
                 <li><a href="">About us</a></li>
             </div>
-            <div class="newsletter sm-1-1 md-1-1 lg-1-3">
+            <div class="newsletter">
                 <h3>Newsletter</h3>
                 <input type="email" value="" placeholder="email@example.com" name="contact[email]" id="Email" class="input-group-field footer-email-input" aria-label="email@example.com">
                 <span>

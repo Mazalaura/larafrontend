@@ -151,8 +151,9 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-  .virsus {
+  div.virsus {
     padding: 0 10px;
+    width: 100%;
   }
 }
 
@@ -191,7 +192,6 @@ a:hover {
   .nuotrauka {
     min-width: calc(100% - 40px);
     left: 0;
-    margin: 20px;
     left: 0;
     right: 0;
   }
@@ -210,6 +210,9 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  margin-top: 0;
 }
 
 .menu-container:hover {
@@ -222,6 +225,10 @@ a:hover {
   color: black;
 }
 
+ul.menu-container li.hamburger {
+  display: none;
+}
+
 .menu-left {
   float: left;
   padding: 25px 0;
@@ -230,6 +237,8 @@ a:hover {
   font-family: 'Hind', sans-serif;
   font-weight: 700;
   font-style: normal;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .elementas {
@@ -702,6 +711,10 @@ p.text-size-24px {
   /* margin: 15px 0 0; */
   -webkit-transition: all .15s ease-in-out 0s;
   transition: all .15s ease-in-out 0s;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 25px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -722,7 +735,7 @@ p.text-size-24px {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   -webkit-transform: translate3d(0px, 28px, 0px);
           transform: translate3d(0px, 28px, 0px);
 }
@@ -730,7 +743,6 @@ p.text-size-24px {
 @media only screen and (max-width: 768px) {
   .parallax {
     width: 100%;
-    height: auto;
     margin-top: 0;
   }
 }
@@ -762,10 +774,12 @@ div.zodziai {
 
 @media only screen and (max-width: 768px) {
   div.zodziai {
+    width: 90%;
     font-size: 20.8px;
     line-height: 25.8px;
     padding: 30px;
     margin: 0;
+    top: 10px;
   }
 }
 
@@ -852,6 +866,15 @@ div.zodziai {
   vertical-align: middle;
 }
 
+@media screen and (max-width: 768px) {
+  .logo img {
+    margin: 0 7.5px 15px 7.5px;
+    display: block;
+    left: 80px;
+    width: 150px;
+  }
+}
+
 /* ************************************************************** */
 .atsiliepimai h2 {
   font-size: 28px;
@@ -872,6 +895,13 @@ div.zodziai {
 .atsiliepimai {
   padding: 30.303030303px 0;
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials.col3 {
+    margin-bottom: 30px;
+    width: 100%;
+  }
 }
 
 .row {
@@ -948,6 +978,18 @@ div.zodziai {
   background-color: #f8f8f8;
 }
 
+@media only screen and (max-width: 768px) {
+  .what-we-do {
+    position: relative;
+    width: 100%;
+    -webkit-transform: none;
+            transform: none;
+    text-align: center;
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
 .what-we-do h2 {
   position: relative;
   font-size: 28px;
@@ -1018,9 +1060,80 @@ div.zodziai {
 .produkto-img {
   width: 50%;
   height: auto;
-  position: relative;
+  position: absolute;
   padding-left: 30px;
   display: inline-block;
+}
+
+.produkto-img img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+div.produkto-img input {
+  display: none;
+}
+
+.produkto-img input:checked + img {
+  opacity: 1;
+  left: 10px;
+}
+
+div.circle-holder {
+  margin-top: 605px;
+  width: 50%;
+  display: inline-block;
+}
+
+div.circle-holder div.center {
+  width: 10%;
+  margin: 0 auto;
+}
+
+div.center label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+label.c1, label.c2 {
+  border: 1px solid black;
+}
+
+label.c1 {
+  opacity: 1;
+  background-color: #333333;
+}
+
+label.c1:hover {
+  background-color: #333333;
+}
+
+label.c2:hover {
+  background-color: #333333;
+}
+
+@media only screen and (max-width: 768px) {
+  div.circle-holder {
+    width: 100%;
+    margin-top: 345px;
+  }
+  div.circle-holder div.center {
+    width: 40%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .produkto-img {
+    width: 97%;
+  }
 }
 
 .produkto-kaina {
@@ -1032,6 +1145,22 @@ div.zodziai {
   float: right;
   background-color: #f8f8f8;
   margin-right: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .produkto-kaina {
+    margin-top: 0;
+    position: relative;
+    width: 98%;
+    padding: 20px 30px;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .produkto-kaina {
+    margin-top: 30px;
+  }
 }
 
 .produkto-title {
@@ -1091,11 +1220,32 @@ input.kiekis {
   margin: 0 0 15px 0;
 }
 
-.swatch .swatch-element.soldout label {
+@media only screen and (max-width: 768px) {
+  input.kiekis {
+    width: 60px;
+  }
+}
+
+label#swatch.soldout {
   opacity: .4;
   background-color: transparent;
   border: rgba(51, 51, 51, 0.5) 1px solid;
   color: #333333;
+}
+
+div.swatch-element {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  position: relative;
+}
+
+div.swatch-element:checked .available {
+  display: block;
+  background: #333333;
+  color: #ffffff;
+  border-color: #333333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .size {
@@ -1108,14 +1258,18 @@ input.kiekis {
   margin-top: 28px;
 }
 
-.swatch label {
-  min-width: 35px;
+input#swatch {
+  width: 90px;
   margin: 0;
-  border: #333333 solid;
+  border: #333333 thin solid;
+  background-color: #f8f8f8;
   text-align: center;
   line-height: 1.6;
   white-space: nowrap;
-  display: block;
+  display: inline-block;
+  position: static;
+  padding: 8px 20px;
+  cursor: pointer;
 }
 
 .button7 {
@@ -1132,11 +1286,15 @@ input.kiekis {
   font-weight: 400;
   font-style: normal;
   font-family: 'Hind', sans-serif;
-  width: 255px;
+  width: 48%;
   text-decoration: none;
   margin: 0 auto;
   display: inline-block;
   text-align: center;
+}
+
+.buton7:first-child {
+  background-color: #4a4a4a;
 }
 
 /* **************************************************************************************** */
@@ -1184,6 +1342,12 @@ input.kiekis {
   position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+  .shop-foto-1, .shop-foto-2, .shop-foto-3, .shop-foto-4, .shop-foto-5, .shop-foto-6, .shop-foto-7, .shop-foto-8 {
+    width: 50%;
+  }
+}
+
 .subheading1, .subheading2, .subheading3, .subheading4, .subheading5, .subheading6, .subheading7, .subheading8 {
   color: #ffffff;
   font-size: 14px;
@@ -1200,8 +1364,14 @@ input.kiekis {
 
 .subheading1 span, .subheading2 span, .subheading3 span, .subheading4 span, .subheading5 span, .subheading6 span, .subheading7 span, .subheading8 span {
   position: relative;
-  top: 45%;
+  top: 40%;
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .subheading1, .subheading2, .subheading3, .subheading4, .subheading5, .subheading6, .subheading7, .subheading8 {
+    opacity: 1;
+  }
 }
 
 .subheading1 {
@@ -1257,13 +1427,31 @@ input.kiekis {
 
 .subheading1-title h2, .subheading2-title h2, .subheading3-title h2, .subheading4-title h2, .subheading5-title h2, .subheading6-title h2, .subheading7-title h2, .subheading8-title h2 {
   position: relative;
-  top: 49%;
+  top: 44%;
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   color: #ffffff;
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .subheading1-title, .subheading2-title, .subheading3-title, .subheading4-title, .subheading5-title, .subheading6-title, .subheading7-title, .subheading8-title {
+    opacity: 1;
+  }
+  .shop-foto-1 .subheading1, .shop-foto-2 .subheading2, .shop-foto-3 .subheading3, .shop-foto-4 .subheading4, .shop-foto-5 .subheading5, .shop-foto-6 .subheading6, .shop-foto-7 .subheading7, .shop-foto-8 .subheading8 {
+    opacity: 1;
+  }
+  .shop-foto-1 .subheading1 span, .shop-foto-2 .subheading2 span, .shop-foto-3 .subheading3 span, .shop-foto-4 .subheading4 span, .shop-foto-5 .subheading5 span, .shop-foto-6 .subheading6 span, .shop-foto-7 .subheading7 span, .shop-foto-8 .subheading8 span {
+    display: block;
+  }
+  .shop-foto-1 .subheading1-title, .shop-foto-2 .subheading2-title, .shop-foto-3 .subheading3-title, .shop-foto-4 .subheading4-title, .shop-foto-5 .subheading5-title, .shop-foto-6 .subheading6-title, .shop-foto-7 .subheading7-title, .shop-foto-8 .subheading8-title {
+    opacity: 1;
+  }
+  .shop-foto-1 .subheading1-title h2, .shop-foto-2 .subheading2-title h2, .shop-foto-3 .subheading3-title h2, .shop-foto-4 .subheading4-title h2, .shop-foto-5 .subheading5-title h2, .shop-foto-6 .subheading6-title h2, .shop-foto-7 .subheading7-title h2, .shop-foto-8 .subheading8-title h2 {
+    display: block;
+  }
 }
 
 .shop-foto-1:hover .subheading1, .shop-foto-2:hover .subheading2, .shop-foto-3:hover .subheading3, .shop-foto-4:hover .subheading4, .shop-foto-5:hover .subheading5, .shop-foto-6:hover .subheading6, .shop-foto-7:hover .subheading7, .shop-foto-8:hover .subheading8 {
@@ -1321,6 +1509,12 @@ input.kiekis {
   display: inline-block;
 }
 
+@media only screen and (max-width: 768px) {
+  .blog-container {
+    width: 100%;
+  }
+}
+
 .blog-foto {
   width: 100%;
   height: 100%;
@@ -1356,6 +1550,23 @@ strong {
   width: 100%;
   position: relative;
   min-height: 60px;
+}
+
+@media only screen and (max-width: 480px) {
+  div.free-container {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #nematomas {
+    display: none;
+    background-color: white;
+    padding: 0;
+  }
 }
 
 .free-container {
@@ -1407,6 +1618,14 @@ div.mailing {
   display: inline-block;
 }
 
+@media only screen and (max-width: 480px) {
+  div.mailing {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+}
+
 .mailing-text h3 {
   font-size: 28px;
   text-align: center;
@@ -1424,16 +1643,32 @@ div.mailing {
   position: absolute;
 }
 
+@media only screen and (max-width: 480px) {
+  .mailing-text h3 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-right: 50px;
+  }
+}
+
 div.email {
   color: #333333;
   padding: 7px 0;
   position: relative;
-  display: inline-block;
-  width: 80%;
+  width: 50%;
+  float: right;
+}
+
+@media only screen and (max-width: 480px) {
+  div.email {
+    width: 100%;
+    top: 30px;
+  }
 }
 
 .newsletter_text {
-  width: 72%;
+  width: 50%;
   background: 0 0;
   display: inline-block;
   margin-bottom: 0;
@@ -1454,9 +1689,9 @@ div.email {
 }
 
 .btn {
-  font-weight: 400;
+  font-weight: 700;
   text-transform: none;
-  font-size: 12px;
+  font-size: 16px;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
@@ -1464,6 +1699,8 @@ div.email {
   -webkit-transition: all .15s ease-in-out 0s;
   transition: all .15s ease-in-out 0s;
   display: inline-block;
+  background-color: white;
+  border: 0;
 }
 
 .apacia {
@@ -1553,9 +1790,12 @@ div.newsletter h3 {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  width: 60%;
-  background-color: #f2f2f2;
+  width: 80%;
   padding: 10px 10px 10px 0;
+}
+
+.footer-email-input {
+  background-color: #f2f2f2;
 }
 
 input.footer-email-submit {
