@@ -2,6 +2,7 @@
 @import 'grid';
 * {
     box-sizing: border-box;
+    max-width: 2000px;
 }
 html {
     height: 100%;
@@ -529,12 +530,15 @@ p.text-size-24px {
     background-position: center;
     background-repeat: no-repeat;
     background-size:contain;
-    transform: translate3d(0px, 28px, 0px); 
+    transform: translate3d(0px, -7px, 0px); 
+    position: relative;
 } 
 @media only screen and (max-width: 768px) {
     .parallax {
     width: 100%;
     margin-top: 0;
+    transform: translate3d(0,0,0) scale(1);
+    background-attachment: scroll;
 }
 }
 .parallax::after {
@@ -563,11 +567,19 @@ div.zodziai {
 @media only screen and (max-width: 768px) {
       div.zodziai {
         width: 90%;
+        display: block;
+        position: relative;
         font-size: 20.8px;
-        line-height: 25.8px;
         padding: 30px;
-        margin: 0;
-        top: 10px;
+        top: 40px;
+      }
+      div.zodziai h2 {
+        font-size: 21px;
+        line-height: 15px;
+      }
+      div.zodziai p {
+        font-size: 14px;
+        line-height: 15px;
       }
   }
 
@@ -820,7 +832,7 @@ div.zodziai {
 }
 .produkto-img {
     width: 50%;
-    height: auto;
+    height:auto;
     position: absolute;
     padding-left: 30px;
     display: inline-block;
@@ -841,7 +853,7 @@ div.produkto-img input {
 
 }
 div.circle-holder {
-    margin-top: 605px;
+    margin-top: 650px;
     width: 50%;
     display: inline-block;
 }
@@ -1407,6 +1419,13 @@ div.about {
     color: #4a4a4a;
     display: inline-block;
 }
+@media only screen and (max-width: 768px) {
+    div.about  {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+}
 div.links {
     display: inline-block;
     width: 33%;
@@ -1417,6 +1436,14 @@ div.links {
         font-size: 22px;
         color: #636363;
         margin: 0 0 11px;
+    }
+}
+@media only screen and (max-width: 768px) {
+div.links {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 30px 0 0;
     }
 }
 .links a {
@@ -1446,6 +1473,14 @@ div.newsletter {
         font-size: 22px;
     }
 }
+@media only screen and (max-width: 768px) {
+    div.newsletter{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 30px 0 0;
+        }
+    }
 .input-group-field {
     display: table-cell;
     vertical-align: middle;
