@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FORMOS</title>
+</head>
+<body>
+
+<div class="container">
+
+    <form action="" method="get">
+
+        <input type="text" name="tekstas" value="kjhlklkkjj">
+        <input type="text" name="tekstas2" placeholder="tekstas2">
+        <input type="password" name="slapt">
+        <input type="email" name="email">
+        <input type="number" name="skaicius">
+        <input type="file" name="paveiksliukas">
+        <input type="reset" name="resetas" value="submitas">
+
+
+        <textarea name="didis_textas"placeholder="tekstas2"></textarea>
+
+        <fieldset>
+            <legend>Radijo mygtukai</legend>
+            <label for="P">Pingvinas</label>
+            <input type="radio" name="radijo" id="P" checked>
+            <label for="T">Tigras</label>
+            <input type="radio" name="radijo" id="T">
+            <label for="M">Makaka</label>
+            <input type="radio" name="radijo" id="M">
+        </fieldset>
+        <fieldset>
+            <legend>Check boksai</legend>
+            <label for="E">Eglė</label>
+            <input type="checkbox" name="egle" id="E">
+            <label for="B">Beržas</label>
+            <input type="checkbox" name="berzas" id="B">
+            <label for="L">Liepa</label>
+            <input type="checkbox" name="liepa" id="L">
+        </fieldset>
+            <fieldset>
+                <legend>Selektas</legend>
+
+                <select name="darzoves">
+                    <option value="0" selected>Pasirink daržovę</option>
+                    <option value="M">Morka</option>
+                    <option value="B">Bulvė</option>
+                    <option value="P">Patisonas</option>
+                    <option value="K">Kopūstas</option>
+
+                </select>
+
+                <select name="vaisiai" multiple>
+                    <option value="0" selected>Pasirink daržovę</option>
+                    <option value="O">Obuolys</option>
+                    <option value="K">Kriaušė</option>
+                    <option value="S">Slyva</option>
+                    <option value="V">Vyšnia</option>
+
+                </select>
+            </fieldset>
+
+
+
+
+        
+        <fieldset>
+            <legend>Mygtukai</legend>
+        <input type="submit" name="mygtukas" value="go go">
+        <button type="submit"name="mygtukas" value="Form 352">Go Go</button>
+        <input type="reset" name="resetas" value="mano puikuolis" disabled>
+        </fieldset>
+
+    </form>
+</div>
+<div class="container">
+    
+    <input type="search" name="ieskok">
+    <input type="range" name="range">
+    <input type="datetime" name="">
+    <input type="color" name="color">
+
+</div>
+    
+</body>
+</html>

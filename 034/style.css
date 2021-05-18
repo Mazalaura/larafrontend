@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+section {
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+h2 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 10px;
+}
+.container {
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid lightseagreen;
+}
+/* attr(name) */
+[for=labas-id]::after {
+    content: attr(data-label-text);
+    display: inline-block;
+    margin-left: 10px;
+}
+[for=labas-id]::after {
+    content: attr(data-label-hello);
+    display: inline-block;
+    margin-left: 10px;
+}
+/* calc() */
+#calc-use {
+    display: flex;
+}
+#calc-use1 {
+height: 20px;
+background-color: lightpink;
+width: calc(100vh - 90%);
+}
+#calc-use2 {
+    height: 20px;
+    background-color: lightseagreen;
+    width: calc(100% - 80vh);
+}
+    /* cubic-bezier */
+#bezier {
+    display: block;
+    position: relative;
+    height: 100px;
+}
+#cubic {
+    position: relative;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: mediumaquamarine;
+    transition: left 2s;
+    transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+#go {
+    margin-bottom: 10px;
+    cursor:crosshair;
+    color: midnightblue;
+    display: inline-block;
+}
+#go:hover + #bezier #cubic{
+    left: calc(100% - 100px);
+}
+/* rgb() hsl() */
+#rgb, #hsl {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    padding: 5px;
+    display: inline-block;
+    text-align: justify;
+}
+#rgb {
+    background-color: rgb(204, 229, 255);
+}
+#hsl {
+    background-color: hsl(176, 53%, 71%);
+}
+/* rgba() hsla() */
+#rgba, #hsla {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    padding: 5px;
+    display: inline-block;
+    text-align: justify;
+}
+#background1 {
+   padding: 25px;
+   background-image: url('015\img\Tamsos princas.jpg');
+   background-position: center;
+   background-size: contain;
+}
+#rgba {
+    background-color: rgb(204, 229, 255, 0.5);
+}
+#hsla {
+    background-color: hsl(176, 53%, 71%, 0.9);
+}
+/* linear-gradient(direction, color1, color2, color3 */
+#background2 {
+    padding: 25px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, green, violet);
+    /* background-image: url('015\img\Tamsos princas.jpg'); */
+    background-position: center;
+    background-size: contain;
+ }
+ #background3 {
+    padding: 25px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to top, green, mediumslateblue, violet);
+    /* background-image: url('015\img\Tamsos princas.jpg'); */
+    background-position: center;
+    background-size: contain;
+ }
+ /* radial-gradient(shape, size, position, color1, color2, color3 */
+ #background4 {
+    padding: 25px;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+    background-image: radial-gradient(circle, green, violet);
+    /* background-image: url('015\img\Tamsos princas.jpg'); */
+    background-position: center;
+    background-size: contain;
+ }
+ #background5 {
+    padding: 25px;
+    height: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-image: radial-gradient(closest-side at 30% 30%, green, mediumslateblue, #ff0000ff);
+    /* background-image: url('015\img\Tamsos princas.jpg'); */
+    background-position: center;
+    background-size: contain;
+ }
+ /* reapeating-linear-gradient(direction, color1, color2, color3 */
+#background6 {
+    padding: 25px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-image: repeating-linear-gradient(to bottom, green 4px, violet 10px;
+    /* background-image: url('015\img\Tamsos princas.jpg'); */
+ }
+#background7 {
+    padding: 25px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-image: repeating-linear-gradient(to left, green, mediumslateblue 10px, violet 20px);
+    /* background-image: url('015\img\Tamsos princas.jpg'); */
+    background-position: center;
+    background-size: contain;
+ }
