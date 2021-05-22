@@ -72,7 +72,7 @@ a {
 }
 
 .grid-container.fixed {
-  margin-right: 0;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -87,9 +87,12 @@ a {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.grid-container.flex ~ div {
+.grid-container.flex > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +130,7 @@ a {
   width: 16.66667%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .md-1,
   .md-1-1,
   .md-1-2,
@@ -156,7 +159,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 900px) {
   .lg-1,
   .lg-1-1,
   .lg-1-2,

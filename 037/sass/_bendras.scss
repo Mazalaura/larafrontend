@@ -1,0 +1,12 @@
+nav {
+    background-color: darkblue;
+}
+a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding: 30px;
+}
+a:hover {
+    color: transparentize($color: #000000, $amount: 0.5);
+}
