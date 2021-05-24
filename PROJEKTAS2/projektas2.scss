@@ -772,6 +772,46 @@ input#swatch {
     min-height: 40px;
     cursor: pointer;
 }
+// *********************************service****************************************************************
+.one-whole {
+    padding-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+.sectionHeader {
+    text-align: center;
+    display: flex;
+    position: relative;
+    align-items: center;
+    .sectionHeader__topAnimation {
+        text-align: center;
+        position: absolute;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .sectionHeader__headline {
+        margin-top: 20px;
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    }
+    .bruksnys span{
+        position: relative;
+        font-size: 2px;
+        border-top: thin solid #656565;
+        padding: 40px;
+    }
+}
+.imageElement {
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    .one-third {
+        width: calc(33.33333333333% - 20px);
+    }
+}
 // *******************************************footer********************************************
 .footer {
     font-size: 14px;
