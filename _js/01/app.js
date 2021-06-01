@@ -66,3 +66,9 @@ n++;
 console.log(typeof n)
 console.log('n', nn)
 
+
+var w = true; //taip, teisingai ir t.t.
+var q = false; // ne, netiesa, ne taip, klaidinga
+
+console.log(typeof w, typeof q, typeof n, typeof g)
+
