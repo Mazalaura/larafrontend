@@ -250,16 +250,15 @@ console.log('masyvas3', masyvas3.slice());
 const counter = [0, 0, 0, 0];
 
 for (let i = 0; i < masyvas.length; i++) {
-    counter[ abcd.indexOf(masyvas3[i]) ]++;
+    let index = abcd.indexOf(masyvas3[i]);
+    counter[index]++;
+    // counter[ abcd.indexOf(masyvas3[i]) ]++;
 }
 
 console.log('counter', counter);
 
 console.log('_____________________Nr 4__________________________');
 // Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. Sudėkite masyvus, sudėdami atitinkamas reikšmes. Paskaičiuokite kiek unikalių (po vieną, nesikartojančių) reikšmių ir kiek unikalių kombinacijų gavote.
-
-const masyvas4 = [];
-
 
 console.log('_____________________Nr 5__________________________');
 // Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
