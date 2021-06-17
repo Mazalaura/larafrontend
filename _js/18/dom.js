@@ -197,11 +197,16 @@ iClick.addEventListener('click', myFunction2);
 console.log('uzduotis 3c');
 // Padaryti, kad paspaudus ant tago su klase prices, backgroundas pasikeistų į pilką, o paspaudus dar kartą vėl grįžtu į baltą spalvą;
 
-// const priceBg = function (e) {
-//     e.stopPropagation();
-//     e.target.classList.toggle.style.background = 'grey';
-// }
-// document.querySelector('.prices').addEventListener('click', priceBg)
+const u3c = document.querySelector('.prices');
+
+const backgroundGray = el => {
+    if (el.target.style.backgroundColor === '' || el.target.style.backgroundColor === 'white'){
+        el.target.style.backgroundColor = 'gray';
+    }
+    else {el.target.style.backgroundColor = 'white'};
+}
+
+u3c.addEventListener('click', backgroundGray);
 
 console.log('uzduotis 3d');
 // Padaryti, kad paspaudus ant tago su id contacts, tam tagui būtų pridėta css savybė color;
