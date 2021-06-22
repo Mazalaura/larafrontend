@@ -104,25 +104,41 @@ mygtukas.addEventListener('click', () => {
 
 
 
-document.querySelector('.knopka').addEventListener('click', kvieciam);
+// document.querySelector('.knopka').addEventListener('click', kvieciam);
 
-function kvieciam() {
+// function kvieciam() {
 
-    fetch('https://in3.dev/vinted/api/brands/all')
-      .then(response => response.json())
-      .then(data => {
-          console.log(data);
-          data.forEach(
-            (x) => {
-                console.log(x);
-                const create = document.createElement('li');
-                const div = document.querySelector('ul.brands');
-                div.append(create);
-                create.innerText = `${x.title}`
-            }
-          )
-    });
-}
+//     fetch('https://in3.dev/vinted/api/brands/all')
+//       .then(response => response.json())
+//       .then(data => {
+//           console.log(data);
+//           data.forEach(
+//             (x) => {
+//                 console.log(x);
+//                 const create = document.createElement('li');
+//                 const div = document.querySelector('ul.brands');
+//                 div.append(create);
+//                 create.innerText = `${x.title}`
+//             }
+//           )
+//     });
+// }
+
+
+
+let output = '';
+fetch('https://in3.dev/vinted/api/brands/all')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(element => {
+    console.log(element.title)
+    output += '<li>' +element.title+ '</li>';
+  });
+  document.querySelector('ul').innerHTML = output;
+});
+
+
+
 
 
 
@@ -140,3 +156,4 @@ fetch('https://picsum.photos/v2/list')
     }
   )
 });
+

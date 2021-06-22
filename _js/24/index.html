@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <title>Kartojimas</title>
+    <style>
+        section {
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid gray;
+        }
+        h6 {
+            color:brown;
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+   <h1></h1>
+    <input type="text" name = 'labas'>
+
+    <select name='laba'>
+        <option value='rytas'>Rytas</option>
+        <option value='diena'>Diena</option>
+        <option value='vakaras'>Vakaras</option>
+    </select>
+
+    
+    <fieldset>
+        <legend>Radijo mygtukai</legend>
+        <label for="R">Rytas</label>
+        <input type="radio" name="radijo" id="Rytas" selected>
+        <label for="D">Diena</label>
+        <input type="radio" name="radijo" id="Diena" selected>
+        <label for="V">Vakaras</label>
+        <input type="radio" name="radijo" id="Vakaras" selected>
+    </fieldset>
+
+    <input id="check" type="checkbox" >
+    <div>
+        <input type="text" class="in1">
+        <button id="b1">Grazinti teksta i Console</button>
+     </div>
+  
+     <div>
+        <select id="s1">
+           <option value="Rytas">Rytas</option>
+           <option value="Diena">Diena</option>
+           <option value="Vakaras">Vakaras</option>
+        </select>
+     </div>
+  
+     <div>
+        Rytas<input type="radio" name="radio1" id="radio1" value="Rytas">
+        Diena<input type="radio" name="radio1" id="radio2" value="Diena">
+        Vakaras<input type="radio" name="radio1" id="radio3" value="Vakaras">
+     </div>
+  
+     <div>
+        Pacheckink mane<input type="checkbox" id="checkbox1">
+     </div>
+  
+     <div>
+        Rytas<input type="checkbox" name="nr5" id="checkbox2" value="Rytas">
+        Diena<input type="checkbox" name="nr5" id="checkbox3" value="Diena">
+        Vakaras<input type="checkbox" name="nr5" id="checkbox4" value="Vakaras">
+     </div>
+  
+     <div>
+        <h1></h1>
+     </div>
+  
+     <div class="h3Div"></div> -->
+    <section>
+        <h6>1.</h6>
+        <input type="text" id="_1">
+        <button id="button1">ADD</button>
+    </section>
+    <section>
+        <h6>2.</h6>
+        <select id="_2">
+            <option value="Rytas">Labas Rytas</option>
+            <option value="Diena">Laba Diena</option>
+            <option value="Vakaras">Labas Vakaras</option>
+        </select>
+    </section>
+    <section>
+        <h6>3.</h6>
+        Labas Rytas<input type="radio" name="_3" value="Rytas">
+        Laba Diena<input type="radio" name="_3" value="Diena">
+        Labas Vakaras<input type="radio" name="_3" value="Vakaras">
+    </section>
+    <section>
+        <h6>4.</h6>
+        Labas<input type="checkbox" id="_4">
+    </section>
+    <section>
+        <h6>5.</h6>
+        Labas Rytas<input type="checkbox" name="_5" value="Rytas">
+        Laba Diena<input type="checkbox" name="_5" value="Diena">
+        Labas Vakaras<input type="checkbox" name="_5" value="Vakaras">
+    </section>
+    <button id="go">Go</button>
+    </body>
+</html>
