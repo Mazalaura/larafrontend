@@ -203,46 +203,87 @@ document.querySelectorAll('[name=_5]').forEach(chE1 => {
 
 console.log('---------------9---------------');
 // Padaryti mygtuką “GO”, kurį paspaudus, naudojant masyvus, gautus 8 uždavinyje, dinamiškai, iš tų masyvų duomenų, būtų sukurta daug h3 tagų kaip tai buvo padaryta 7 uždavinyje (vienas įrašas masyve, atinka vieną naują h3 tagą).
+// const where = document.querySelector('div');
+
+const bbz = (val) => {
+    if(Array.isArray(val)){
+        val.forEach(bbz);
+    }
+    else {
+    const textN = document.createTextNode(val);
+    const element = document.createElement('h3');
+    element.appendChild(textN);
+    where.appendChild(element);
+}
+
+const bbz1 = (val) => {
+    const textN = document.createTextNode(val);
+    const element = document.createElement('h3');
+    element.appendChild(textN);
+    where.appendChild(element);
+}
+const bbz2 = (val) => {
+    val.forEach(v => {
+        const textN = document.createTextNode(v);
+        const element = document.createElement('h3');
+        element.appendChild(textN);
+        where.appendChild(element);
+    })
+}
+
+// document.querySelector('#go').addEventListener('click', () => {
+//     array1.forEach(bbz);
+//     array2.forEach(bbz);
+//     array3.forEach(bbz);
+//     array4.forEach(bbz);
+//     array5.forEach(v => {
+//         console.log(v);
+//         let tt = '';
+//         v.forEach(t => tt += t + ' ');
+//         bbz(tt);
+//     })
+// });
+const go = document.querySelector('#go');
 const h3Div2 = document.querySelector('.h3Div2');
 
-document.querySelector('#go').addEventListener('click', () => {
-    array1.forEach((val) => {
-        let h3 = document.createElement('h3');
-        h3.style.color = 'red';
-        h3.innerText = val;
-        h3Div2.appendChild(h3);
-    });
-    array2.forEach((val) => {
-        let h3 = document.createElement('h3');
-    h3.style.color = 'red';
-    h3.innerText = val;
-    h3Div2.appendChild(h3);
-    });
-    array3.forEach((val) => {
-        let h3 = document.createElement('h3');
-        h3.style.color = 'red';
-        h3.innerText = val;
-        h3Div2.appendChild(h3);
-    });
-    array4.forEach((val) => {
-        let h3 = document.createElement('h3');
-        h3.style.color = 'red';
-        h3.innerText = val;
-        h3Div2.appendChild(h3);
-    });
-    array5.forEach((val) => {
-   let h3 = document.createElement('h3');
-    h3.style.color = 'red';
-    h3.innerText = val;
-    h3Div2.appendChild(h3);
+go.addEventListener('click', () => {
+   array1.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   array2.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   array3.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   array4.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   array5.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
 });
-});
-
 
 console.log('---------------10---------------');
 // Padaryti mygtuką “Reset”, kuris ištrintų duomenis iš visų masyvų.
 
-document.querySelector('#reset').addEventListener('click', () => {
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', () => {
     array1 = [];
     array2 = [];
     array3 = [];
@@ -263,16 +304,17 @@ document.querySelector('#clear').addEventListener('click', () => {
 
 console.log('---------------12---------------');
 // Padaryti mygtuką “GO JSON”, kurį paspaudus, 9 uždavinio masyvus būtų sudėti į sukurtą naują objektą. Tą objektą paversti JSON stringu ir užsaugoti susikurtam kintamąjame. Kintamąjį išvesti i console.log Nuskaityti JSON stringą iš kintamojo, paversti jį objektu ir iš jo informacijos suformuoti h3 tagus kaip 9 uždavinyje.
-let newObj = {};
 
 document.querySelector('#json').addEventListener('click', () => {
     // get data/arrays from obj to new object
-    for(let z in obj) {
-        console.log(obj[z]);
-        Object.assign(newObj, {[z]: obj[z]})
+   const newObj = {
+        array1: array1, 
+        array2: array2,
+        array3: array3,
+        array4: array4,
+        array5: array5
     }
-    console.log(newObj);
-
+    
     // make string
     const jso = JSON.stringify(newObj);
     console.log(jso);
@@ -282,9 +324,25 @@ document.querySelector('#json').addEventListener('click', () => {
     console.log(newJso);
 
     // upload and create new elements in dom
-    for(let q in newJso) {
-        const newH3 = document.createElement('h3');
-        newH3.innerText = newJso[q];
-        last.append(newH3);
+    
+//antika
+    // const keys = Object.keys(newJso);
+    // for(let i =0; i < keys.length; i++) {
+    //     console.log(newJso[keys[i]]);
+    // }
+
+
+
+    // Object.entries(newJso).forEach(item => {
+    //     console.log(item);
+    // })
+
+
+for(const prop in newJso) {
+    if(Array.isArray(newJso[prop][o])) {
+        newJso[prop].forEach(bbz2);
     }
-});
+    else {
+        newJso[prop].forEach(bbz1);
+    }
+}
