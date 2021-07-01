@@ -17,14 +17,15 @@
         <input type="text" id="myInput" placeholder="Title...">
         <span onclick="newElement()" class="addBtn">Add</span>
       </div>
+      <div class='select'>
+        <select name='todos' class='filter-todo'>
+          <option value='all'>Visos</option>
+          <option value='creat'>Sukurta</option>
+          <option value='completed'>Atlikta</option>
+          <option value='uncompleted'>Vykdoma</option>
+        </select>
       <ul id="myUL">
-        <li class="checked">Go through DataFlair's JavaScript tutorials</li>
-        <li>Practise the codes</li>
-        <li>Read a book on JavaScript</li>
-        <li class="checked">Organise my notes</li>
-        <li>Create JavaScript projects</li>
-        <li>Take quiz</li>
-        <li>Comprehend interview questions</li>
+        
       </ul>
       <button type="button" id="clear-list" onclick="removeAll()">Clear Items</button>
 
