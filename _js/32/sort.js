@@ -355,36 +355,37 @@ console.log('------------------------------------------------')
 
 class Pinigine {
         constructor() {
-        this.popieriniaiPinigai = 0;
-        this.metaliniaiPinigai = 0;
+        this.popieriniaiPinigai = [0];
+        this.metaliniaiPinigai = [0];
     }
     ideti(kiekis) {
         if(kiekis <= 2) {
-            this.metaliniaiPinigai++;
+            this.metaliniaiPinigai.push(kiekis);
         }
         else {
-            this.popieriniaiPinigai++;
+            this.popieriniaiPinigai.push(kiekis);
         }
-    }
-    monetos() {
-        console.log('Yra tiek monetu:', this.metaliniaiPinigai );
     }
     banknotai() {
-        console.log('Yra tiek banknotu:', this.popieriniaiPinigai);
-        }
+        console.log('Yra tiek banknotu:', this.popieriniaiPinigai.length -1);
+    }
+    monetos() {
+        console.log('Yra tiek monetu:', this.metaliniaiPinigai.length -1);
+    }
+    skaiciuoti() {
+        console.log('Yra tiek pinigu:', this.metaliniaiPinigai.reduce((a, v) => a + v) + this.popieriniaiPinigai.reduce((a = 0, v) => a + v) );
+    }
     }
     
     const odinePinigine = new Pinigine();
     const plastikinePinigine = new Pinigine();
     
-    odinePinigine.ideti();
-    plastikinePinigine.ideti();
-    odinePinigine.ideti();
-    plastikinePinigine.ideti();
-    odinePinigine.ideti();
-    plastikinePinigine.ideti();
-    odinePinigine.ideti();
-    plastikinePinigine.ideti();
+    odinePinigine.ideti(235);
+    plastikinePinigine.ideti(0.87);
+    odinePinigine.ideti(100);
+    plastikinePinigine.ideti(1);
+    odinePinigine.ideti(100);
+    plastikinePinigine.ideti(10);
 
 
 
